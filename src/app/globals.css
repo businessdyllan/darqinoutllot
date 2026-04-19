@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0b0d12;
+  --bg2: #10131a;
+  --bg3: #161921;
+  --card: #1a1d27;
+  --b: #242836;
+  --b2: #2e3348;
+  --b3: #3a4060;
+  --txt: #d8dce8;
+  --mut: #6b7394;
+  --hint: #3a4060;
+  --red: #f03050;
+  --rdim: #1e0c12;
+  --rbrd: #5a1828;
+  --grn: #00d47a;
+  --gdim: #061810;
+  --gbrd: #186040;
+  --blu: #4a9eff;
+  --bludim: #0c1e35;
+  --blubrd: #1a4a80;
+  --org: #f5a020;
+  --pur: #b060ff;
+  --wht: #e8ecf8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--txt);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 12px;
+  overflow: hidden;
+  user-select: none;
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--b3); border-radius: 2px; }
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--b2);
+  outline: none;
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid var(--bg3);
+}
