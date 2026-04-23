@@ -16,7 +16,7 @@ export default function RightPanel() {
   const tradeHistory = useStore((s) => s.tradeHistory);
 
   return (
-    <div className="flex flex-col bg-[var(--bg2)] overflow-hidden border-l border-[var(--b)]">
+    <div className="flex flex-col h-full bg-[var(--bg2)] overflow-hidden border-l border-[var(--b)]">
       {/* Tab bar */}
       <div className="flex border-b border-[var(--b)] flex-shrink-0">
         {TABS.map((tab) => (

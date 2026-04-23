@@ -1,6 +1,7 @@
 'use client';
 import { useStore } from '@/store';
-import { SPEED_PRESETS } from '@/lib/constants';
+import { SPEED_PRESETS, PAIRS } from '@/lib/constants';
+import { buildInitialScene, genLiqOrders } from '@/engine/tickGenerator';
 
 const TIMEFRAMES = ['1m', '5m', '15m', '1H', '4H'];
 
@@ -21,8 +22,6 @@ export default function ChartToolbar() {
   const handleReset = () => {
     const s = useStore.getState();
     if (!s.scenario) return;
-    const { buildInitialScene, genLiqOrders } = require('@/engine/tickGenerator');
-    const { PAIRS } = require('@/lib/constants');
     const P = PAIRS[s.pair];
     const { candles, volBars, keyLevel, breakoutAt, retestAt, finalPrice } = buildInitialScene(P.p, P.atr, s.scenario);
     const liq = genLiqOrders(keyLevel, P.atr);

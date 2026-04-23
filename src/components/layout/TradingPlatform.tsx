@@ -56,7 +56,7 @@ export default function TradingPlatform() {
         </div>
 
         {/* Right panel */}
-        <div className="w-[280px] flex-shrink-0">
+        <div className="w-[280px] flex-shrink-0 h-full">
           <RightPanel />
         </div>
       </div>
